@@ -76,24 +76,39 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="menu-container">
                     <ul class="nav navbar-nav">
-                        <li class="page-scroll home active">
-                            <a href="#body">Home</a>
-                        </li>
                         <li class="page-scroll">
-                            <a href="#about">About</a>
+                            @if(Auth::check())
+                                <a href="#"><img class="dish__user_img rounded-x" src="{{Auth::user()->picture}}" alt="">Welcome, {{Auth::user()->given_name}}</a>
+                            @else
+                                <script src="https://cdn.auth0.com/js/lock/10.9.1/lock.min.js"></script>
+                                <script>
+                                    var lock = new Auth0Lock('vkAYdxw31NEK0v2tCWP9yEGu16L8V8H9', 'rigstatus.auth0.com', {
+                                        auth: {
+                                            redirectUrl: 'http://104.131.42.15/auth0/callback/',
+                                            responseType: 'code',
+                                            params: {
+                                                scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+                                            }
+                                        },
+                                        additionalSignUpFields: [
+                                            {
+                                                name: "name",
+                                                placeholder: "Enter your full name"
+                                            }]
+                                    });
+                                </script>
+                                <button onclick="lock.show();">Login</button>
+                            @endif
+
                         </li>
-                        <li class="page-scroll">
-                            <a href="#menu">Menu</a>
-                        </li>
-                        <li class="page-scroll hidden-md">
-                            <a href="#special">Special</a>
-                        </li>
-                        <li class="page-scroll hidden-md">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="page-scroll hidden-md">
-                            <a href="#">User<img class="dish__user_img rounded-x" src="assets/images/promo/user_image.jpeg" alt=""></a>
-                        </li>
+                        @if(Auth::check())
+                            <li class="page-scroll hide-sm">
+                                <a href="/logout" ><i class="fa fa-sign-out"></i></a>
+                            </li>
+                            <li class="page-scroll show-sm hide-md">
+                                <a href="/logout" >logout</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

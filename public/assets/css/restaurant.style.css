@@ -305,7 +305,7 @@ body {
 }
 .dish__user_img {
   height: 30px;
-    margin: -10px 0px auto 5px;
+    margin: -10px 5px auto 0px;
     width: 30px !important;
     border: 2px solid #fff;
     -webkit-box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.25);

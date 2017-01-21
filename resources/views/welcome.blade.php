@@ -21,19 +21,6 @@
                 margin: 0;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
 
             .top-right {
                 position: absolute;
@@ -62,19 +49,23 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            #map {
+                  height: 400px;
+                  width: 100%;
+              }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/logout') }}">Logout</a>
                 </div>
             @if(Auth::check())
-                {{dd(Auth::user())}}
+                {{Auth::user()->given_name}} <img src="{{Auth::user()->image_url}}" alt="">
             @endif
             <div class="content">
                 <div class="title m-b-md">
+                    <div style="width: 500px;height: 500px"><div id="map"></div></div>
                     Laravel
                 </div>
 
@@ -103,6 +94,23 @@
                     });
                 </script>
                 <button onclick="lock.show();">Login</button>
+                <script>
+                    function initMap() {
+                        var uluru = {lat: -25.363, lng: 131.044};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8NdM0BgGIIukS9Yp9N5L3qrO8A8FLPqQ&callback=initMap">
+                </script>
+
             </div>
         </div>
     </body>

@@ -30,13 +30,16 @@ class CustomAuthRepository implements Auth0UserRepository
     }
 
     protected function upsertUser($profile) {
+        //dd($profile);
         $user = User::where("auth0id", $profile["user_id"])->first();
         if ($user === null) {
             // If not, create one
             $user = new User();
-            $user->email = $profile["email"]; // you should ask for the email scope
+            $user->email = $profile["email"];
             $user->auth0id = $profile["user_id"];
-            $user->given_name = $profile["given_name"]; // you should ask for the name scope
+            $user->image_url = $profile["picture"];
+            $user->education = '';
+            $user->given_name = $profile["given_name"];
             $user->family_name = $profile["family_name"];
             $user->save();
         }

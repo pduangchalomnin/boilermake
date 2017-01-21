@@ -21,6 +21,7 @@ class CreateUserTable extends Migration
             $table->string('given_name');
             $table->string('family_name');
             $table->string('image_url');
+            $table->string('education')->default('');
             $table->timestamps();
         });
     }

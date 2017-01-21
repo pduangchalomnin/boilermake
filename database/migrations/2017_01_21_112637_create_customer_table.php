@@ -15,7 +15,7 @@ class CreateCustomerTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id')->index();
-            $table->string('uid')->index();
+            $table->string('did')->index();
             $table->string('customerUid')->index();
             $table->time('arrivalTime');
             $table->timestamps();

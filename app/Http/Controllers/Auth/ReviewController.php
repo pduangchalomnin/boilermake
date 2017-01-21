@@ -16,6 +16,9 @@ class ReviewCOntroller extends Controller
       $review->did=$request->did;
       $review->star=$request->star;
       $review->reviewText=$request->reviewText;
+      $review->save();
 
+      Session::flash('success','Thank you for your review.');
+      return back();
   }
 }

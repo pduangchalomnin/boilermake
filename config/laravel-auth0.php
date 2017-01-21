@@ -10,7 +10,7 @@ return array(
     |
     */
 
-    // 'domain'        => 'XXXX.auth0.com',
+     'domain'        => 'rigstatus.auth0.com',
     /*
     |--------------------------------------------------------------------------
     |   Your APP id
@@ -19,7 +19,7 @@ return array(
     |
     */
 
-    // 'client_id'     => 'XXXX',
+     'client_id'     => 'vkAYdxw31NEK0v2tCWP9yEGu16L8V8H9',
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
     |   As set in the auth0 administration page
     |
     */
-    // 'client_secret' => 'XXXXX',
+     'client_secret' => '6uCjhRYRn9DvWWY2RUwAwvVAotpHBWZ5PRgH4JBIcXtuLJzg9pJTKHLIy_ZsLA9m',
 
    /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
     |
     */
 
-    // 'redirect_uri'  => 'http://<host>/auth0/callback'
+     'redirect_uri'  => 'http://104.131.42.15/auth0/callback'
 
     /*
     |--------------------------------------------------------------------------

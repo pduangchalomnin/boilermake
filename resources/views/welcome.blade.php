@@ -21,19 +21,6 @@
                 margin: 0;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
 
             .top-right {
                 position: absolute;
@@ -62,19 +49,23 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            #map {
+                  height: 400px;
+                  width: 100%;
+              }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
                 <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="{{ url('/logout') }}">Logout</a>
                 </div>
+            @if(Auth::check())
+                {{Auth::user()->given_name}} <img src="{{Auth::user()->image_url}}" alt="">
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
+                    <div style="width: 500px;height: 500px"><div id="map"></div></div>
                     Laravel
                 </div>
 
@@ -85,6 +76,41 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <script src="https://cdn.auth0.com/js/lock/10.9.1/lock.min.js"></script>
+                <script>
+                    var lock = new Auth0Lock('vkAYdxw31NEK0v2tCWP9yEGu16L8V8H9', 'rigstatus.auth0.com', {
+                        auth: {
+                            redirectUrl: 'http://104.131.42.15/auth0/callback/',
+                            responseType: 'code',
+                            params: {
+                                scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+                            }
+                        },
+                        additionalSignUpFields: [
+                            {
+                                name: "name",
+                                placeholder: "Enter your full name"
+                            }]
+                    });
+                </script>
+                <button onclick="lock.show();">Login</button>
+                <script>
+                    function initMap() {
+                        var uluru = {lat: -25.363, lng: 131.044};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8NdM0BgGIIukS9Yp9N5L3qrO8A8FLPqQ&callback=initMap">
+                </script>
+
             </div>
         </div>
     </body>

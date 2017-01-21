@@ -66,13 +66,13 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="{{ url('/logout') }}">Logout</a>
                 </div>
+            @if(Auth::check())
+                {{dd(Auth::user())}}
             @endif
-{{Auth::user() . "fff"}}
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -94,7 +94,12 @@
                             params: {
                                 scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
                             }
-                        }
+                        },
+                        additionalSignUpFields: [
+                            {
+                                name: "name",
+                                placeholder: "Enter your full name"
+                            }]
                     });
                 </script>
                 <button onclick="lock.show();">Login</button>

@@ -72,7 +72,7 @@
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
-
+{{Auth::user() . "fff"}}
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -85,6 +85,19 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <script src="https://cdn.auth0.com/js/lock/10.9.1/lock.min.js"></script>
+                <script>
+                    var lock = new Auth0Lock('vkAYdxw31NEK0v2tCWP9yEGu16L8V8H9', 'rigstatus.auth0.com', {
+                        auth: {
+                            redirectUrl: 'http://104.131.42.15/auth0/callback/',
+                            responseType: 'code',
+                            params: {
+                                scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+                            }
+                        }
+                    });
+                </script>
+                <button onclick="lock.show();">Login</button>
             </div>
         </div>
     </body>

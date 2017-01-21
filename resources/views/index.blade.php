@@ -168,11 +168,11 @@
 			<div class="tab-v9">
 				<div class="container">
 					<ul class="nav nav-tabs">
-						<li class="tab-v9__tab active"><a href="#meat-t9" data-toggle="tab">Meat</a></li>
-						<li class="tab-v9__tab"><a href="#fish-t9" data-toggle="tab">Fish</a></li>
-						<li class="tab-v9__tab"><a href="#fastfood-t9" data-toggle="tab">Fast Food</a></li>
-						<li class="tab-v9__tab"><a href="#pizza-t9" data-toggle="tab">Pizza</a></li>
-						<li class="tab-v9__tab"><a href="#vegan-t9" data-toggle="tab">Vegetarian Dishes</a></li>
+						<li class="tab-v9__tab active"><a href="#meat-t9" data-toggle="tab">Indian</a></li>
+						<li class="tab-v9__tab"><a href="#fish-t9" data-toggle="tab">Chinese</a></li>
+						<li class="tab-v9__tab"><a href="#fastfood-t9" data-toggle="tab">Thai</a></li>
+						<li class="tab-v9__tab"><a href="#pizza-t9" data-toggle="tab">American</a></li>
+						<li class="tab-v9__tab"><a href="#vegan-t9" data-toggle="tab">Vegetarian</a></li>
 					</ul>
 				</div>
 				<div class="tab-content">
@@ -181,35 +181,35 @@
 							<div class="col-md-7 md-auto-height">
 								<div class="row no-column-space">
 									<div class="col-sm-4">
-										<img class="img-responsive md-full-width" src="/assets/images/food/food_small1.jpg" alt="">
+										<img class="img-responsive md-full-width" src="/assets/images/food/Butter-Chicken-Closeup-jpg.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + potatoes</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$8.50</span>
+											<h3 class="food-in__name"><a href="">Butter Chiken</a></h3>
+											<p class="food-in__text">Indian Butter Chiken, comes with
+												Berani Bread.</p>
+											<span class="food-in__price g-dp-block">$4.50</span>
+											<span class="food-in__cat g-dp-block">1235 S. State</span>
 										</div>
 									</div>
 
 									<div class="col-sm-4">
-										<img class="img-responsive md-full-width" src="/assets/images/food/food_small2.jpg" alt="">
+										<img class="img-responsive md-full-width" src="/assets/images/food/Chicken-Tikka-Masala-2-1024x698.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + carrot salad</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$10.20</span>
+											<h3 class="food-in__name"><a href="">Chicken Tikka Masala</a></h3>
+											<p class="food-in__text">Chicken Tikka Masala
+												with yummy sauce.</p>
+											<span class="food-in__price g-dp-block">$6.00</span>
+											<span class="food-in__cat g-dp-block">3212 Indiana St.</span>
 										</div>
 									</div>
 
 									<div class="col-sm-4">
-										<img class="img-responsive md-full-width" src="/assets/images/food/food_small3.jpg" alt="">
+										<img class="img-responsive md-full-width" src="/assets/images/food/Indian-Food.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + mashroom sauce</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$11.00</span>
+											<h3 class="food-in__name"><a href="">Spicy Beef</a></h3>
+											<p class="food-in__text">Authentic Spciy indian food.
+												made by locals, for students.</p>
+											<span class="food-in__price g-dp-block">$4.50</span>
+										 <span class="food-in__cat g-dp-block">3612 Michigain Ave. </span>
 										</div>
 									</div>
 								</div>
@@ -220,11 +220,11 @@
 									<div class="carousel-inner">
 										<div class="item active">
 											<div class="shadow"></div>
-											<img src="/assets/images/food/food_big1.jpg" alt="">
+											<img src="/assets/images/food/best-indian-food-new-orleans.jpg" alt="">
 											<div class="carousel-caption">
-												<span class="carousel-v6__price g-dp-block">$9.50</span>
-												<h4 class="carousel-v6__title">Steak with special sauce</h4>
-												<p class="carousel-v6__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												<span class="carousel-v6__price g-dp-block">$7.50</span>
+												<h4 class="carousel-v6__title">Chicken and Rice </h4>
+												<p class="carousel-v6__text">Served with bread, vegetables and chicken.</p>
 											</div>
 										</div>
 										<div class="item">
@@ -255,35 +255,35 @@
 							<div class="col-md-7">
 								<div class="row no-column-space">
 									<div class="col-md-4">
-										<img class="img-responsive" src="/assets/images/food/food_small2.jpg" alt="">
+										<img class="img-responsive" src="/assets/images/food/Mongolian-Chicken.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + potatoes</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$8.50</span>
+											<h3 class="food-in__name"><a href="">Mongolian Chicken </a></h3>
+											<p class="food-in__text">Mongolian chicken, green onions hoisin sauce
+												Very Delicious.</p>
+											<span class="food-in__price g-dp-block">$4.50</span>
+											<span class="food-in__cat g-dp-block">3245 Indiana St. </span>
 										</div>
 									</div>
 
 									<div class="col-md-4">
-										<img class="img-responsive" src="/assets/images/food/food_small3.jpg" alt="">
+										<img class="img-responsive" src="/assets/images/food/chinese-shimp-pasta.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + carrot salad</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$10.20</span>
+											<h3 class="food-in__name"><a href="">Shrimp Pasta</a></h3>
+											<p class="food-in__text">Chinease Shrimp Pasta with very good sauce.
+												Excellent for lunch.</p>
+											<span class="food-in__price g-dp-block">$5.5</span>
+											<span class="food-in__cat g-dp-block">2313 Michigain Ave. </span>
 										</div>
 									</div>
 
 									<div class="col-md-4">
-										<img class="img-responsive" src="/assets/images/food/food_small1.jpg" alt="">
+										<img class="img-responsive" src="/assets/images/food/sezchuan-beef-stir-fry-4.jpg" alt="">
 										<div class="food-in text-center">
-											<span class="food-in__cat g-dp-block">steak</span>
-											<h3 class="food-in__name"><a href="">steak + mashroom sauce</a></h3>
-											<p class="food-in__text">Sed nec iaculis libero, vel ornare dui.
-												Curabitur vitae nisl lorem.</p>
-											<span class="food-in__price g-dp-block">$11.00</span>
+											<h3 class="food-in__name"><a href="">Sezchuan Beef</a></h3>
+											<p class="food-in__text">Sezchuan Beef Stir Fry
+												Local Authentic, at the heart of Chinatown</p>
+											<span class="food-in__price g-dp-block">$5.0</span>
+											<span class="food-in__cat g-dp-block">1363 S. State</span>
 										</div>
 									</div>
 								</div>
@@ -294,11 +294,11 @@
 									<div class="carousel-inner">
 										<div class="item active">
 											<div class="shadow"></div>
-											<img src="/assets/images/food/food_big1.jpg" alt="">
+											<img src="/assets/images/food/sweet-and-sour-chicken-hero-brighter-text.jpg" alt="">
 											<div class="carousel-caption">
-												<span class="carousel-v6__price g-dp-block">$19.50</span>
-												<h4 class="carousel-v6__title">Steak with special sauce</h4>
-												<p class="carousel-v6__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												<span class="carousel-v6__price g-dp-block">$7.5</span>
+												<h4 class="carousel-v6__title">Sweet and Sour Chicken</h4>
+												<p class="carousel-v6__text">Sweet and Sour Chicken with special sauce</p>
 											</div>
 										</div>
 										<div class="item">
@@ -871,44 +871,6 @@
 
 	<!-- Special -->
 	<!-- End Special -->
-
-
-
-	<!-- Services -->
-	<section id="services">
-		<div class="container g-pb-80">
-			<div class="heading-v20 text-center">
-				<span class="heading-v20__pre-title g-dp-block g-mb-20">Services</span>
-				<h2 class="heading-v20__title g-mb-30">What do we propose</h2>
-				<i class="heading-v20__icon fa fa-circle g-mb-30" aria-hidden="true"></i>
-				<p class="heading-v20__text g-mb-20">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante.</p>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-3 service text-center">
-					<span aria-hidden="true" class="icon-food-039 service__icon"></span>
-					<h3 class="service__title g-mb-30"><a href="">Catering</a></h3>
-					<p class="service__text">Nunc ligula nulla, efficitur et eros ut, vulputate gravida leo. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-				</div>
-				<div class="col-sm-3 service text-center">
-					<span aria-hidden="true" class="icon-food-001 service__icon"></span>
-					<h3 class="service__title g-mb-30"><a href="">Custom orders</a></h3>
-					<p class="service__text">Nunc ligula nulla, efficitur et eros ut, vulputate gravida leo. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-				</div>
-				<div class="col-sm-3 service text-center">
-					<span aria-hidden="true" class="icon-food-008 service__icon"></span>
-					<h3 class="service__title g-mb-30"><a href="">Juices</a></h3>
-					<p class="service__text">Nunc ligula nulla, efficitur et eros ut, vulputate gravida leo. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-				</div>
-				<div class="col-sm-3 service text-center">
-					<span aria-hidden="true" class="icon-food-276 service__icon"></span>
-					<h3 class="service__title g-mb-30"><a href="">Lorem Epsum</a></h3>
-					<p class="service__text">Nunc ligula nulla, efficitur et eros ut, vulputate gravida leo. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Services -->
 
 	<!-- Gallery -->
 

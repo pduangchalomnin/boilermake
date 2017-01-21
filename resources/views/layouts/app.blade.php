@@ -97,16 +97,12 @@
                                             }]
                                     });
                                 </script>
-                                <button onclick="lock.show();">Login</button>
+                                <button onclick="lock.show();" class="btn-u">Login</button>
                             @endif
-
                         </li>
                         @if(Auth::check())
                             <li class="page-scroll hide-sm">
                                 <a href="/logout" ><i class="fa fa-sign-out"></i></a>
-                            </li>
-                            <li class="page-scroll show-sm hide-md">
-                                <a href="/logout" >logout</a>
                             </li>
                         @endif
                     </ul>

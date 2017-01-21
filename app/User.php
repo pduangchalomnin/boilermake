@@ -8,5 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
+    public function dine(){
+        return  $this->hasMany('App\Dine','uid','auth0id');
+    }
 
+    public function customer(){
+        return $this->hasMany('App\Customer','customerUid','auth0id');
+    }
+
+    public function reivew(){
+        return $this->hasMany('App\Review','customerUid','auth0id');
+    }
 }

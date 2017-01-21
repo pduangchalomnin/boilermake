@@ -15,6 +15,7 @@ class HostController extends Controller
           $dine = new Dine();
           $dine->uid = Auth::user()->auth0id;
           $dine->name= $request->name;
+          $dine->detail = $request->detail;
           //TODO add picture request
           $dine->price=$request->price;
           $dine->dineDate=$request->dineDate;
@@ -24,7 +25,7 @@ class HostController extends Controller
           $dine->seatAvailable=$request->seatMax;
           $dine->save();
 
-    foreach ($tags as $tagMe) {
+    foreach ($request->tags as $tagMe) {
       $tag = new Tag();
 
       $tag->did = $dine->id;

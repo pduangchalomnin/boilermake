@@ -17,6 +17,7 @@ class CreateDineTable extends Migration
             $table->increments('id')->index();
             $table->string('uid')->index();
             $table->string('name')->index();
+            $table->text('detail');
             $table->text('pic');
             $table->double('price')->index();
             $table->date('dineDate')->index();

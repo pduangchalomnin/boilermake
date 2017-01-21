@@ -61,7 +61,7 @@
                     <a href="{{ url('/logout') }}">Logout</a>
                 </div>
             @if(Auth::check())
-                {{Auth::user()->given_name}} <img src="{{Auth::user()->image_url}}" alt="">
+                {{Auth::user()->given_name}} <img src="{{Auth::user()->picture}}" alt="">
             @endif
             <div class="content">
                 <div class="title m-b-md">

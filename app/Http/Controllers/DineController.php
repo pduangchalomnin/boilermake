@@ -15,8 +15,9 @@ class DineController extends Controller
         if(empty($dine)) {
             return abort(404);
         }
-        $isDoReservation =
-        return view('showDineItem',compact('dine'));
+        $customer = Customer::where('did','=',$id)->where('CustomerUid','=',Auth::user()->auth0id)->first();
+        $isDoReservation = !empty($customer)?true:false;
+        return view('showDineItem',compact('dine','isDoReservation'));
     }
 
     public function reservationConfrim($id,$request){
@@ -30,9 +31,9 @@ class DineController extends Controller
             $customer->customerUid = Auth::user()->auth0id;
             $customer->did = $request->did;
             $customer->arrivalTime = $request->arrivalTime;
-            $customer->save;
+            $customer->save();
             $dine->seatAvailable = $dine->seatAvailable-1;
-            Session::flash('sussess','Congratulation! your resevation has been made!');
+            Session::flash('success','Congratulation! your resevation has been made!');
             return back();
         } else {
             Session::flash('error','Sorry. Your selected dine is full.');

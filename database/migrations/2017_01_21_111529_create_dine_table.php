@@ -15,7 +15,7 @@ class CreateDineTable extends Migration
     {
         Schema::create('dines', function (Blueprint $table) {
             $table->increments('id')->index();
-            $table->integer('uid')->index();
+            $table->string('uid')->index();
             $table->string('name')->index();
             $table->text('pic');
             $table->double('price')->index();

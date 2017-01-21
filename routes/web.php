@@ -18,3 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/auth0/callback', '\Auth0\Login\Auth0Controller@callback');

@@ -87,86 +87,49 @@
                                 <h3 class="panel-title"><i class="fa fa-tasks"></i> Search Results</h3> </div>
                             <div class="panel-body">
                                 <div class="col-md-12">
-                                    <div class="item">
-                                        <div class="post">
-                                            <div class="row">
-                                                <div class="col-md-5"> <img class="post__img img-responsive" src="assets/images/good-taste/good_taste1.jpg" alt=""> </div>
-                                                <div class="col-md-7">
-                                                    <form action="#" id="" class="sky-form food-rating-section">
-                                                        <section>
-                                                            <div class="rating">
-                                                                <input type="radio" name="stars-rating" id="stars-rating-5"> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> </div>
-                                                        </section>
-                                                    </form>
-                                                    <div class="post__child text-left"> <span class="post__child--cat">Indian Food</span>
-                                                        <h3 class="post__child--title mrB-5">Lorem Epsum</h3>
-                                                        <div class="g-mb-20"> <span class="label label-success rounded-2x"><i class="fa fa-flag"></i> Indian</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-011"></i> Chicken</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-026"></i> Non Veg</span> </div>
-                                                        <p class="post__child--text g-mb-10">Curabitur eget tortor sed urna faucibus iaculis id et nulla. Aliquam erat volutpat.</p>
-                                                        <p class="post__child--text g-mb-20"><span aria-hidden="true" class="glyphicon glyphicon-map-marker mrR-5"></span>Chicago, Illinois</p> <span class="post__child--price">$12.99</span> <a href="#" data-toggle="modal" data-target="#orderConfirmation" rel="round-corners" class="btn-u btn-u-red round-corners mrL-10">Order Now</a> </div>
+                                    @foreach($foodList as $food)
+                                        <div class="item">
+                                            <div class="post">
+                                                <div class="row">
+                                                    <div class="col-md-5"> <img class="post__img img-responsive" src="{{$food->pic}}" alt=""> </div>
+                                                    <div class="col-md-7">
+                                                        <form action="#" id="" class="sky-form food-rating-section">
+                                                            <section>
+                                                                <div class="rating">
+                                                                    @php
+                                                                        $rating = \App\User::where('auth0id','=',$food->uid)->first()->getRating();
+                                                                    @endphp
+                                                                    @for($i=0; $i<$rating; $i++)
+                                                                         <i class="fa fa-star rating-star"></i>
+                                                                    @endfor
+                                                                    @for($i;$i<5;$i++)
+                                                                        <i class="fa fa-star disabled-rating"></i>
+                                                                    @endfor
+                                                                     </div>
+                                                            </section>
+                                                        </form>
+                                                        <div class="post__child text-left">
+                                                            <h3 class="post__child--title mrB-5">{{$food->name}}</h3>
+                                                            <div class="g-mb-20">
+                                                                @php
+                                                                    $tags = \App\Tag::where('did','=',$food->id)->get();
+                                                                @endphp
+                                                            @foreach($tags as $tag)
+                                                                    <span class="label label-success rounded-2x"> {{$tag->tag}}</span>
+                                                            @endforeach
+                                                            </div>
+                                                            <p class="post__child--text g-mb-10">{{$food->detail}}</p>
+                                                            <p class="post__child--text g-mb-20"><span aria-hidden="true" class="glyphicon glyphicon-map-marker mrR-5"></span>{{$food->address}}</p>
+                                                            <span class="post__child--price">$ {{$food->price}}</span>
+                                                            {{--<a href="#" data-toggle="modal" data-target="#orderConfirmation" rel="round-corners" class="btn-u btn-u-red round-corners mrL-10">Order Now</a>--}}
+                                                            <a href="/order/{{$food->id}}" class="btn-u btn-u-red round-corners mrL-10">Order Now</a>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="post">
-                                            <div class="row">
-                                                <div class="col-md-5"> <img class="post__img img-responsive" src="assets/images/good-taste/good_taste2.jpg" alt=""> </div>
-                                                <div class="col-md-7">
-                                                    <form action="#" id="" class="sky-form food-rating-section">
-                                                        <section>
-                                                            <div class="rating">
-                                                                <input type="radio" name="stars-rating" id="stars-rating-5"> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star disabled-rating"></i> <i class="fa fa-star disabled-rating"></i> <i class="fa fa-star disabled-rating"></i> </div>
-                                                        </section>
-                                                    </form>
-                                                    <div class="post__child text-left"> <span class="post__child--cat">Chinese Food</span>
-                                                        <h3 class="post__child--title mrB-5">Lorem Epsum</h3>
-                                                        <div class="g-mb-20"> <span class="label label-success rounded-2x"><i class="fa fa-flag"></i> Chinese</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-011"></i> Chicken</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-026"></i> Non Veg</span> </div>
-                                                        <p class="post__child--text g-mb-10">Curabitur eget tortor sed urna faucibus iaculis id et nulla. Aliquam erat volutpat.</p>
-                                                        <p class="post__child--text g-mb-20"><span aria-hidden="true" class="glyphicon glyphicon-map-marker mrR-5"></span>Chicago, Illinois</p> <span class="post__child--price">$10.99</span> <a href="#" data-toggle="modal" data-target="#orderConfirmation" rel="round-corners" class="btn-u btn-u-red round-corners mrL-10">Order Now</a> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="post">
-                                            <div class="row">
-                                                <div class="col-md-5"> <img class="post__img img-responsive" src="assets/images/good-taste/good_taste3.jpg" alt=""> </div>
-                                                <div class="col-md-7">
-                                                    <form action="#" id="" class="sky-form food-rating-section">
-                                                        <section>
-                                                            <div class="rating">
-                                                                <input type="radio" name="stars-rating" id="stars-rating-5"> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star disabled-rating"></i> <i class="fa fa-star disabled-rating"></i> </div>
-                                                        </section>
-                                                    </form>
-                                                    <div class="post__child text-left"> <span class="post__child--cat">Italian Food</span>
-                                                        <h3 class="post__child--title mrB-5">Lorem Epsum</h3>
-                                                        <div class="g-mb-20"> <span class="label label-success rounded-2x"><i class="fa fa-flag"></i> Italian</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-011"></i> Potato</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-026"></i> Vegan</span> </div>
-                                                        <p class="post__child--text g-mb-10">Curabitur eget tortor sed urna faucibus iaculis id et nulla. Aliquam erat volutpat.</p>
-                                                        <p class="post__child--text g-mb-20"><span aria-hidden="true" class="glyphicon glyphicon-map-marker mrR-5"></span>Naperville, Illinois</p> <span class="post__child--price">$14.99</span> <a href="#" data-toggle="modal" data-target="#orderConfirmation" rel="round-corners" class="btn-u btn-u-red round-corners mrL-10">Order Now</a> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="post">
-                                            <div class="row">
-                                                <div class="col-md-5"> <img class="post__img img-responsive" src="assets/images/good-taste/good_taste2.jpg" alt=""> </div>
-                                                <div class="col-md-7">
-                                                    <form action="#" id="" class="sky-form food-rating-section">
-                                                        <section>
-                                                            <div class="rating">
-                                                                <input type="radio" name="stars-rating" id="stars-rating-5"> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star rating-star"></i> <i class="fa fa-star disabled-rating"></i> </div>
-                                                        </section>
-                                                    </form>
-                                                    <div class="post__child text-left"> <span class="post__child--cat">Mexican Food</span>
-                                                        <h3 class="post__child--title mrB-5">Lorem Epsum</h3>
-                                                        <div class="g-mb-20"> <span class="label label-success rounded-2x"><i class="fa fa-flag"></i> Mexican</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-011"></i> Meat</span> <span class="label label-success rounded-2x mrL-5"><i class="icon-food-026"></i> Non Veg</span> </div>
-                                                        <p class="post__child--text g-mb-10">Curabitur eget tortor sed urna faucibus iaculis id et nulla. Aliquam erat volutpat.</p>
-                                                        <p class="post__child--text g-mb-20"><span aria-hidden="true" class="glyphicon glyphicon-map-marker mrR-5"></span>Chicago, Illinois</p> <span class="post__child--price">$9.99</span> <a href="#" data-toggle="modal" data-target="#orderConfirmation" rel="round-corners" class="btn-u btn-u-red round-corners mrL-10">Order Now</a> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

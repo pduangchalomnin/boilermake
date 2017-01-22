@@ -11,8 +11,22 @@ use DB;
 
 class TagController extends Controller {
   public function getSuggestion() {
-    $list = DB::table('tags')->select(DB::raw('count(*) as count, tag'))->where('tag','like','%'.Input::get('search').'%')
+      $listFood = DB::table('dines')->select('name')
+          ->where('name','like','%'.Input::get('search').'%')
+          ->orderBy('dineDate','asc')
+          ->limit(2)
+          ->get();
+
+      $collection = collect();
+        foreach ($listFood as $food){
+            $collection->push(['tag'=>$food->name]);
+        }
+      $list = DB::table('tags')->select(DB::raw('count(*) as count, tag'))->where('tag','like','%'.Input::get('search').'%')
                     ->groupBy('tag')->orderBy('count','desc')->get();
-    return response()->json($list);
+      foreach ($list as $tag){
+          $collection->push(['tag'=>$tag->tag]);
+      }
+      //dd($collection);
+      return response()->json($collection);
   }
 }

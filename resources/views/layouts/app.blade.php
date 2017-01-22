@@ -58,6 +58,42 @@
 
 <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery font-main promo-padding-top">
 <main class="wrapper">
+    @if(\Illuminate\Support\Facades\Session::has('error') || count($errors) > 0 || \Illuminate\Support\Facades\Session::has('success') )
+    <!--Order Confirmation Modal Start-->
+    <div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel4">Message</h4> </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mrB-10">
+                            @if (count($errors) > 0)
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                            @endif
+                            @if(\Illuminate\Support\Facades\Session::has('error'))
+                                {{\Illuminate\Support\Facades\Session::get('error')}}
+                            @endif
+                            @if (\Illuminate\Support\Facades\Session::has('success'))
+                                    {{\Illuminate\Support\Facades\Session::get('success')}}
+                            @endif
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-u mrL-5" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+    <!--Order Confirmation Modal End-- >
     <!-- Header -->
     <nav class="header one-page-header navbar navbar-default navbar-fixed-top restaurant-header one-page-nav-scrolling " data-role="navigation">
         <div class="container"> <!-- Maybe should be changed to container-fluid-->
@@ -80,7 +116,7 @@
                     <ul class="nav navbar-nav">
                         <li class="page-scroll">
                             @if(Auth::check())
-                                <a href="#"><img class="dish__user_img rounded-x" src="{{Auth::user()->picture}}" alt="">Welcome, {{Auth::user()->given_name}}</a>
+                                <a href="/profile"><img class="dish__user_img rounded-x" src="{{Auth::user()->picture}}" alt="">Welcome, {{Auth::user()->given_name}}</a>
                             @else
                                 <script src="https://cdn.auth0.com/js/lock/10.9.1/lock.min.js"></script>
                                 <script>
@@ -114,9 +150,10 @@
             <!-- Section for Search start-->
             <div class="row search-bar">
                 <!--Basic Example-->
+                <form action="/search" method="get" id="" class="sky-form">
                 <div class="col-md-6 pdR-0">
                     <div class="">
-                        <input type="text" id="searchBox" class="form-control" placeholder="Search for Food's">
+                        <input type="text" name='keyword' id="searchBox" class="form-control" placeholder="Search for Food's">
                     </div>
 
 
@@ -129,7 +166,7 @@
 
                     <div class="input-group">
 
-                        <form action="#" id="" class="sky-form">
+
                             <label class="select state-success mr-0">
                                 <select id="selectUniversity" name="gender" class="valid">
                                     <option value="0" selected="" disabled="">University</option>
@@ -140,12 +177,13 @@
                                 </select>
                                 <i></i>
                             </label>
-
-                        </form>
-                        <span class="input-group-btn">
-											<button class="btn btn-danger" type="submit" title="Search Food"><span class="glyphicon glyphicon-search"></span></button>
+                            <span class="input-group-btn">
+                            <button class="btn btn-danger" type="submit" title="Search Food"><span class="glyphicon glyphicon-search"></span></button>
 						</span>
+
+
                     </div>
+                </form>
                 </div>
                 <!--End Checkboxes and Radio Addons-->
             </div>
@@ -358,6 +396,13 @@
 
 
         <![endif]-->
+@if(\Illuminate\Support\Facades\Session::has('error') || count($errors) > 0 || \Illuminate\Support\Facades\Session::has('success') )
+    <script>
+        $("#informationModal").modal('show');
+    </script>
+    @endif
+    <script>
         @yield('js')
+</script>
 </body>
 </html>

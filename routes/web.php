@@ -21,3 +21,10 @@ Route::get('/logout',function(){
 
 Route::get('/test','HomeController@test');
 Route::get('/search','HomeController@search');
+Route::get('/dine/create','DineController@createDineView')->middleware('auth');
+Route::post('/dine/create','HostController@becomeHost')->middleware('auth');
+
+Route::get('/profile','ProfileController@self');
+Route::get('/profile/{id}','ProfileController@getProfile');
+
+Route::get('/order/{id}','DineController@reservationConfirm');

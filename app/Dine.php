@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dine extends Model
 {
-    public function tag(){
+    public function getTag(){
         return $this->hasMany('App\Tag', 'did', 'id');
     }
 

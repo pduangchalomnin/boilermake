@@ -15,11 +15,11 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-026 dish__icon"></span>
-						<h2 class="dish__title font-main">Chicken dishes</h2>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
-						<span class="dish__name g-dp-block">aassasa sd d g  g g</span>
-						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$9.00</span>
+						<h2 class="dish__title font-main">Homemade</h2>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">-->
+						<span class="dish__name g-dp-block">with Love</span>
+						<!--<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>-->
+						<!--<span class="dish__price g-dp-block">$9.00</span>-->
 					</div>
 				</div>
 
@@ -30,14 +30,14 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-026 dish__icon"></span>
-						<h2 class="dish__title font-main">Chicken dishes</h2>
+						<!--<h2 class="dish__title font-main">Chicken dishes</h2>-->
 						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
 						<span class="dish__name g-dp-block">aassasa sd d g  g g</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
 						<span class="dish__price g-dp-block">$9.00</span>
 					</div>
 				</div>
-				<div class="ms-thumb">Chicken Dishes</div>
+				<div class="ms-thumb">Homemade</div>
 			</div>
 			<!-- End Slide 1 -->
 
@@ -51,12 +51,12 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-119 dish__icon"></span>
-						<h2 class="dish__title font-main">Fish dishes</h2>
-						<span class="dish__subtitle g-dp-block">Fresh from the ocean</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small2.jpg" alt="">
+						<h2 class="dish__title font-main">For Students</h2>
+						<span class="dish__subtitle g-dp-block">By locals, and fellow students</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small2.jpg" alt="">
 						<span class="dish__name g-dp-block">Sushi rolls</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$10.00</span>
+						<span class="dish__price g-dp-block">$10.00</span>-->
 					</div>
 				</div>
 				<div class="ms-layer show-sm text-center" data-type="text" data-delay="10" data-effect="skewleft(50,340)" data-ease="easeOutExpo" data-duration="2200"
@@ -66,22 +66,22 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-119 dish__icon"></span>
-						<h2 class="dish__title font-main">Fish dishes</h2>
-						<span class="dish__subtitle g-dp-block">Fresh from the ocean</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small2.jpg" alt="">
-						<span class="dish__name g-dp-block">Sushi rolls</span>
+						<h2 class="dish__title font-main">For Students</h2>
+						<span class="dish__subtitle g-dp-block">By locals, and fellow students</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small2.jpg" alt="">-->
+						<!--<span class="dish__name g-dp-block">Sushi rolls</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$10.00</span>
+						<span class="dish__price g-dp-block">$10.00</span>-->
 					</div>
 				</div>
-				<div class="ms-thumb ms-thumb--darker">Fish Dishes</div>
+				<div class="ms-thumb ms-thumb--darker">For Students</div>
 			</div>
 			<!-- End Slide 2 -->
 
 			<!-- Slide 3 -->
 			<div class="slide-shadow"></div>
 			<div class="ms-slide">
-				<img src="/assets/plugins/master-slider/masterslider/style/blank.gif" data-src="/assets/images/promo/promo1.jpg" alt="ALT">
+				<img src="/assets/plugins/master-slider/masterslider/style/blank.gif" data-src="/assets/images/promo/PR3.jpg" alt="ALT">
 				<div class="ms-layer hide-sm text-center" data-type="text" data-delay="10" data-effect="skewleft(50,340)" data-ease="easeOutExpo" data-duration="2200"
 					 data-origin= "mc"
 					 data-offset-x= "-100"
@@ -89,12 +89,12 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-026 dish__icon"></span>
-						<h2 class="dish__title font-main">Meat dishes</h2>
-						<span class="dish__subtitle g-dp-block">Only fresh meat</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
+						<h2 class="dish__title font-main">Around you</h2>
+						<span class="dish__subtitle g-dp-block">your neighboor will be cooking</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
 						<span class="dish__name g-dp-block">Juicy steak with special sauce</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$9.00</span>
+						<span class="dish__price g-dp-block">$9.00</span>-->
 					</div>
 				</div>
 
@@ -105,33 +105,33 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-026 dish__icon"></span>
-						<h2 class="dish__title font-main">Meat dishes</h2>
-						<span class="dish__subtitle g-dp-block">Only fresh meat</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
+						<h2 class="dish__title font-main">Around you</h2>
+						<span class="dish__subtitle g-dp-block">your neighboor will be cooking</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small3.jpg" alt="">
 						<span class="dish__name g-dp-block">Juicy steak with special sauce</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$9.00</span>
+						<span class="dish__price g-dp-block">$9.00</span>-->
 					</div>
 				</div>
-				<div class="ms-thumb">Meat Dishes</div>
+				<div class="ms-thumb">Around you</div>
 			</div>
 			<!-- End Slide 3 -->
 
 			<!-- Slide 4 -->
 			<div class="ms-slide">
-				<img src="/assets/plugins/master-slider/masterslider/style/blank.gif" data-src="/assets/images/promo/promo3.jpg" alt="ALT">
+				<img src="/assets/plugins/master-slider/masterslider/style/blank.gif" data-src="/assets/images/promo/campus.jpg" alt="ALT">
 				<div class="ms-layer hide-sm text-center" data-type="text" data-delay="10" data-effect="skewleft(50,340)" data-ease="easeOutExpo" data-duration="2200" data-origin= "mc"
 					 data-offset-x= "-100"
 					 data-offset-y= "15"
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-187 dish__icon"></span>
-						<h2 class="dish__title font-main">Dishes for <br> Vegans</h2>
-						<span class="dish__subtitle g-dp-block">Green nature</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small6.jpg" alt="">
+						<h2 class="dish__title font-main">Comming <br> soon</h2>
+						<span class="dish__subtitle g-dp-block">to your Campus</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small6.jpg" alt="">
 						<span class="dish__name g-dp-block">Special Vegan tomato soup</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$7.39</span>
+						<span class="dish__price g-dp-block">$7.39</span>-->
 					</div>
 				</div>
 				<div class="ms-layer show-sm text-center" data-type="text" data-delay="10" data-effect="skewleft(50,340)" data-ease="easeOutExpo" data-duration="2200" data-origin= "mc"
@@ -140,15 +140,15 @@
 					 data-resize= "true">
 					<div class="dish text-center">
 						<span class="icon-food-187 dish__icon"></span>
-						<h2 class="dish__title font-main">Dishes for <br> Vegans</h2>
-						<span class="dish__subtitle g-dp-block">Green nature</span>
-						<img class="dish__img rounded-x" src="/assets/images/promo/promo_small6.jpg" alt="">
+						<h2 class="dish__title font-main">Coming <br> Soon</h2>
+						<span class="dish__subtitle g-dp-block">To your Campus</span>
+						<!--<img class="dish__img rounded-x" src="/assets/images/promo/promo_small6.jpg" alt="">
 						<span class="dish__name g-dp-block">Special Vegan tomato soup</span>
 						<span class="dish__desc g-dp-block">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.</span>
-						<span class="dish__price g-dp-block">$7.39</span>
+						<span class="dish__price g-dp-block">$7.39</span>-->
 					</div>
 				</div>
-				<div class="ms-thumb">Dishes for Vegans</div>
+				<div class="ms-thumb">Coming Soon</div>
 			</div>
 			<!-- End Slide 4 -->
 		</div>

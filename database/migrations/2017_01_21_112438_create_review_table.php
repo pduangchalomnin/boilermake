@@ -15,7 +15,7 @@ class CreateReviewTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id')->index();
-            $table->string('did')->index();
+            $table->string('chiefUid')->index();
             $table->string('customerUid')->index();
             $table->text('reviewText');
             $table->integer('star')->index();

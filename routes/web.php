@@ -18,3 +18,5 @@ Route::get('/logout',function(){
     Auth::logout();
     return redirect('/');
 });
+
+Route::get('/test','HomeController@test');

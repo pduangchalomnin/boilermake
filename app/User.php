@@ -16,7 +16,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Customer','customerUid','auth0id');
     }
 
-    public function reivew(){
+    public function reviewTo(){
         return $this->hasMany('App\Review','customerUid','auth0id');
+    }
+
+    public function reviewBy(){
+        return $this->hasMany('App\Review','chiefUid','auth0id');
     }
 }

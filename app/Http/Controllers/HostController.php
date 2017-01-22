@@ -40,6 +40,9 @@ class HostController extends Controller
         $dine->timeEnd=$request->timeEnd;
         $dine->seatMax=$request->seatMax;
         $dine->seatAvailable=$request->seatMax;
+        $dine->location_lat = $request->location_lat;
+        $dine->lacation_lon = $request->location_lon;
+        $dine->address = $request->address;
         $dine->save();
         foreach ($request->tags as $tagMe) {
           $tag = new Tag();

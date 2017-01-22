@@ -9,4 +9,8 @@ class Dine extends Model
     public function tag(){
         return $this->hasMany('App\Tag', 'did', 'id');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User','auth0id','uid');
+    }
 }

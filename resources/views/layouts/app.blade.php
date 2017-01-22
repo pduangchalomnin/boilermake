@@ -19,39 +19,41 @@
     <link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/blocks.css">
-    <link rel="stylesheet" href="assets/css/one.style.css">
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/blocks.css">
+    <link rel="stylesheet" href="/assets/css/one.style.css">
 
     <!-- CSS Footer -->
-    <!-- <link rel="stylesheet" href="assets/css/footers/footer-v7.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/footers/footer-v7.css"> -->
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel2/assets/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
-    <link rel="stylesheet" href="assets/plugins/hover-effects/css/custom-hover-effects.css">
-    <link rel="stylesheet" href="assets/plugins/shhos/shhos.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
-    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
-    <link rel="stylesheet" href="assets/plugins/pace/pace-flash.css">
-    <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons-pro/styles.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel2//assets/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="/assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+    <link rel="stylesheet" href="/assets/plugins/hover-effects/css/custom-hover-effects.css">
+    <link rel="stylesheet" href="/assets/plugins/shhos/shhos.css">
+    <link rel="stylesheet" href="/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <link rel="stylesheet" href="/assets/plugins/pace/pace-flash.css">
+    <link rel="stylesheet" href="/assets/plugins/slick/slick.css">
 
-    <link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
-    <link rel="stylesheet" href="assets/plugins/master-slider/u-styles/testimonials-1.css">
-    <link rel="stylesheet" href="assets/plugins/master-slider/u-styles/promo-1.css">
+    <link rel="stylesheet" href="/assets/plugins/master-slider/masterslider/style/masterslider.css">
+    <link rel="stylesheet" href="/assets/plugins/master-slider/u-styles/testimonials-1.css">
+    <link rel="stylesheet" href="/assets/plugins/master-slider/u-styles/promo-1.css">
 
     <!-- CSS Theme -->
-    <link rel="stylesheet" href="assets/css/restaurant.style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/restaurant.style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
+    @yield('css')
 </head>
 
 <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery font-main promo-padding-top">
@@ -68,7 +70,7 @@
                 </button>
 
                 <a class="navbar-brand main-font" href="#body">
-                    <img src="assets/images/logo.png" alt="Logo">
+                    <img src="/assets/images/logo.png" alt="Logo">
                 </a>
             </div>
 
@@ -114,7 +116,7 @@
                 <!--Basic Example-->
                 <div class="col-md-6 pdR-0">
                     <div class="">
-                        <input type="text" class="form-control" placeholder="Search for Food's">
+                        <input type="text" id="searchBox" class="form-control" placeholder="Search for Food's">
                     </div>
 
 
@@ -131,7 +133,7 @@
                             <label class="select state-success mr-0">
                                 <select id="selectUniversity" name="gender" class="valid">
                                     <option value="0" selected="" disabled="">University</option>
-                                    <option value="1">Illinois Technology</option>
+                                    <option value="1">Illinois Institute Technology</option>
                                     <option value="2">UIC</option>
                                     <option value="3">Purdue University</option>
                                     <option value="3">Other</option>
@@ -141,8 +143,8 @@
 
                         </form>
                         <span class="input-group-btn">
-											<button class="btn btn-danger" type="button" title="Search Food"><span class="glyphicon glyphicon-search"></span></button>
-										</span>
+											<button class="btn btn-danger" type="submit" title="Search Food"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
                     </div>
                 </div>
                 <!--End Checkboxes and Radio Addons-->
@@ -229,7 +231,7 @@
 									<div class="contact__floating-block">
 										<div class="row no-column-space equal-height-columns">
 											<div class="col-sm-6 no-padding equal-height-column">
-												<img class="img-responsive hidden-xs" src="assets/images/contact/contact.jpg" alt="">
+												<img class="img-responsive hidden-xs" src="/assets/images/contact/contact.jpg" alt="">
 											</div>
 											<div class="col-sm-6 col-xs-12 contact__right--list text-center no-side-padding equal-height-column">
 												<div class="valign__middle">
@@ -267,7 +269,7 @@
                             <div class="row no-column-space equal-height-columns valign__middle">
                                 <div class="col-sm-12 text-center page-scroll">
                                     <a class="subfooter__logo" href="#body">
-                                        <img class="subfooter__logo__img g-mb-20" src="assets/images/logo.png" alt="Logo"><br>
+                                        <img class="subfooter__logo__img g-mb-20" src="/assets/images/logo.png" alt="Logo"><br>
                                     </a>
                                     <p class="subfooter__copyright">© 2016 All right reserved.<span class="subfooter__copyright--pink"><a href="#">Unify</a></span>. Development by <span class="subfooter__copyright--pink"><a href="#"> Htmlstream</a></span></p>
                                 </div>
@@ -281,34 +283,35 @@
         </main>
 
         <!-- JS Global Compulsory -->
-        <script src="assets/plugins/jquery/jquery.min.js"></script>
-        <script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/plugins/jquery/jquery.min.js"></script>
+        <script src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+        <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- JS Implementing Plugins -->
-        <script src="assets/plugins/smoothScroll.js"></script>
-        <script src="assets/plugins/jquery.easing.min.js"></script>
-        <script src="assets/plugins/pace/pace.min.js"></script>
-        <script src="assets/plugins/owl-carousel2/owl.carousel.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-        <script src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-        <script src="assets/plugins/modernizr.js"></script>
-        <script src="assets/plugins/slick/slick.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&amp;callback=initMap" async defer></script>
+        <script src="/assets/plugins/smoothScroll.js"></script>
+        <script src="/assets/plugins/jquery.easing.min.js"></script>
+        <script src="/assets/plugins/pace/pace.min.js"></script>
+        <script src="/assets/plugins/owl-carousel2/owl.carousel.min.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+        <script src="/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script src="/assets/plugins/modernizr.js"></script>
+        <script src="/assets/plugins/slick/slick.min.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>-->
 
-        <script src="assets/plugins/master-slider/masterslider/masterslider.min.js"></script>
+        <script src="/assets/plugins/master-slider/masterslider/masterslider.min.js"></script>
 
         <!-- JS Page Level-->
-        <script src="assets/js/one.app.js"></script>
-        <script src="assets/js/plugins/owl2-carousel-v1.js"></script>
-        <script src="assets/js/plugins/owl2-carousel-v3.js"></script>
-        <script src="assets/js/plugins/owl2-carousel-v4.js"></script>
-        <script src="assets/js/plugins/cube-portfolio.js"></script>
-        <script src="assets/js/plugins/datepicker.js"></script>
-        <script src="assets/js/plugins/gmaps-ini.js"></script>
-        <script src="assets/js/plugins/promo.js"></script>
-        <script src="assets/js/plugins/special-dishes.js"></script>
+        <script src="/assets/js/one.app.js"></script>
+        <script src="/assets/js/plugins/owl2-carousel-v1.js"></script>
+        <script src="/assets/js/plugins/owl2-carousel-v3.js"></script>
+        <script src="/assets/js/plugins/owl2-carousel-v4.js"></script>
+        <script src="/assets/js/plugins/cube-portfolio.js"></script>
+        <script src="/assets/js/plugins/datepicker.js"></script>
+        <script src="/assets/js/plugins/gmaps-ini.js"></script>
+        <script src="/assets/js/plugins/promo.js"></script>
+        <script src="/assets/js/plugins/special-dishes.js"></script>
+        <script src="/assets/js/plugins/bootstrap-typeahead.min.js"></script>
         <script>
             $(function() {
                 App.init();
@@ -316,10 +319,45 @@
                 Owl2Carouselv3.initOwl2Carouselv3();
                 Owl2Carouselv4.initOwl2Carouselv4();
                 Datepicker.initDatepicker();
+
+                $("#searchBox").typeahead({
+                    onSelect: function(item) {
+                        console.log(item);
+                    },
+                    ajax: {
+                        url: "/api/getTagSuggestion/",
+                        timeout: 500,
+                        displayField: "tag",
+                        triggerLength: 1,
+                        method: "get",
+                        loadingClass: "loading-circle",
+                        preDispatch: function (query) {
+                            //showLoadingMask(true);
+                            return {
+                                search: query
+                            }
+                        },
+                        preProcess: function (data) {
+                            //showLoadingMask(false);
+                            if (data.success === false) {
+                                // Hide the list, there was some error
+
+                                return false;
+                            }
+                            // We good!
+                            console.log(data);
+                            return data;
+                        }
+                    }
+                });
+
             });
         </script>
         <!--[if lt IE 10]>
-        <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+
+
         <![endif]-->
+        @yield('js')
 </body>
 </html>

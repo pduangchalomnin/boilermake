@@ -28,6 +28,7 @@ class HomeController extends Controller
         $topIndainFoods = $this->getTop5IndianFood();
         $topChineseFoods = $this->getTop5ChineseFood();
         $topAmericaFoods = $this->getTop5AmericanFood();
+        //dd($topIndainFoods);
         return view('index',compact('topIndainFoods','topChineseFoods','topAmericaFoods'));
     }
 
@@ -37,13 +38,14 @@ class HomeController extends Controller
         }
 
             private function getTopFoodByTag($tag,$amount){
+//                dd(DB::select(DB::raw('(SELECT ROUND(AVG(star),0) as starRating,auth0id FROM users
+//                                                         join reviews on users.auth0id = reviews.chiefUid group by auth0id)')));
                 $list = DB::table('dines')->join('users', 'users.auth0id', '=', 'dines.uid')
-                                        ->join('reviews','reviews.chiefUid','=','dines.uid')
                                         ->join('tags','tags.did','=','dines.id')
-                                        ->join(DB::raw('(SELECT ROUND(AVG(star),0),auth0id as starRating FROM users
-                                                         join reviews on users.auth0id = reviews.chiefUid group by auth0id) AS A')
-                                                ,'auth0id','=','dines.uid')
-                                        ->where('tag','like',$tag)
+                                        ->join(DB::raw('(SELECT ROUND(AVG(star),0) as starRating,users.auth0id FROM users
+                                                         join reviews on users.auth0id = reviews.chiefUid group by auth0id) AS a')
+                                                ,'users.auth0id','=','dines.uid')
+                                        ->where('tag','=',$tag)
                                         ->orderBy('starRating','desc')
                                         ->limit($amount)
                                         ->get();
@@ -63,5 +65,10 @@ class HomeController extends Controller
     public function test()
     {
         return view('welcome');
+    }
+
+    public function search()
+    {
+        return view('search');
     }
 }

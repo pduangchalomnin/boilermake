@@ -20,3 +20,4 @@ Route::get('/logout',function(){
 });
 
 Route::get('/test','HomeController@test');
+Route::get('/search','HomeController@search');

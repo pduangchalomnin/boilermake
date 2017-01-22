@@ -1,12 +1,57 @@
-.mr-0{
-  margin: 0px;
+.mr-0 {
+    margin: 0px;
 }
-.pdR-0{
-  padding-right: 0px;
+.mrL-5{
+    margin-left: 5px;
 }
-#selectUniversity{
-  background-color: #fff;
+.mrL-10 {
+    margin-left: 10px;
 }
+.mrR-5{
+    margin-right: 5px;
+}
+
+.mrT-10 {
+    margin-top: 10px;
+}
+.mrB-5 {
+    margin-bottom: 5px;
+}
+.mrB-10{
+    margin-bottom: 10px;
+}
+.pdR-0 {
+    padding-right: 0px;
+}
+
+#selectUniversity {
+    background-color: #fff;
+}
+
 .top-nav-collapse.navbar-fixed-top .search-bar {
     margin-bottom: 10px;
+}
+
+input[type=radio].disabled:hover {
+    cursor: not-allowed;
+}
+
+.rating-star {
+    color: #72c02c;
+    font-size: 17px;
+}
+.food-rating-section{
+    border:none;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+.disabled-rating{
+    color: #ccc;
+}
+.color-black{
+    color: black;
+}
+.text-right{
+    text-align: right;
 }

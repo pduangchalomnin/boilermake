@@ -26,11 +26,13 @@ class CreateDineTable extends Migration
             $table->integer('seatMax')->index();
             $table->integer('seatAvailable');
             $table->string('address');
+            $table->double('location_lat');
+            $table->double('location_lon');
             $table->timestamps();
         });
-        DB::statement('ALTER TABLE dines ADD location_lat POINT' );
-        DB::statement('ALTER TABLE dines ADD location_lon POINT' );
-        
+        //DB::statement('ALTER TABLE dines ADD location_lat POINT' );
+        //DB::statement('ALTER TABLE dines ADD location_lon POINT' );
+
     }
 
     /**
